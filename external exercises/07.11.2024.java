@@ -15,7 +15,7 @@ public class Main {
                 array[i][j] = scanner.nextInt();
             }
         }
-        
+
         for (int i = 0; i < array.length; i++) {
             boolean condition = false;
             for (int j = 0; j < array[i].length; j++) {
@@ -31,10 +31,20 @@ public class Main {
                 }
             }
         }
-        
+
+        int indexm = 0;
+        int indexn = 0;
+
         for (int i = 0; i < array.length; i++) {
+            indexm++;
             for (int j = 0; j < array[i].length; j++) {
-                System.out.print(array[i][j] + " ");
+                if (array[i][j] != 0){
+                    indexn++;
+                    int [][] newarray = new int[indexm][indexn];
+                    newarray[indexm-1][indexn-1] = array[i][j];
+                    System.out.print(array[i][j] + " ");
+                }
+
             }
             System.out.println();
         }
